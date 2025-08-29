@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Responsive Real Estate Website</title>
+
+    <!-- CSS file -->
+    <link rel="stylesheet" href="Real.css">
+
+    <!-- Font Awesome CDN for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main">
+        
+    <!-- header section starts -->
+    <header>
+        <a href="#" class="logo"><span>real</span>Estate</a>
+
+        <nav class="navbar">
+            <a href="#Home">Home</a>
+            <a href="#Service">Service</a>
+            <a href="#Features">Features</a>
+            <a href="#Agents">Agents</a>
+            <a href="#Contact">Contact</a>
+        </nav> 
+
+        <div class="icons">
+            <div id="menu-bars" class="fas fa-bars"></div>
+            <a href="#" class="fas fa-heart"></a>
+            <a href="#" class="fas fa-user"></a>
+        </div>
+    </header>
+    <!-- header section ends -->
+ 
+    <!-- home section starts -->
+    <section class="home" id="Home">
+    <form action="">
+        <h3>Find Your Perfect Home</h3>
+        <div class="buttons-container">
+            <a href="#" class="btn">For Rent</a>
+            <a href="#" class="btn">For Sale</a>
+        </div>
+
+        <div class="inputBox">
+            <input type="search" placeholder="Neighbourhood">
+            <input type="search" placeholder="City">
+
+            <select>
+                <option value="" disabled selected>Minimum Price</option>
+                <option value="5000">$5000</option>
+                <option value="10000">$10000</option>
+                <option value="15000">$15000</option>
+                <option value="20000">$20000</option>
+                <option value="25000">$25000</option>
+            </select>
+
+            <select>
+                <option value="" disabled selected>Maximum Price</option>
+                <option value="30000">$30000</option>
+                <option value="35000">$35000</option>
+                <option value="40000">$40000</option>
+                <option value="45000">$45000</option>
+                <option value="50000">$50000</option>
+            </select>
+
+            <select>
+                <option value="" disabled selected>Property Status</option>
+                <option value="Ready to move">Ready to move</option>
+                <option value="Under construction">Under construction</option>
+                <option value="Furnished">Furnished</option>
+            </select>
+        </div>
+    </form>
+</section>
+ </div>
+    <!-- home section ends -->
+
+    <!-- JS for menu toggle -->
+    <script>
+        let menu = document.querySelector('#menu-bars');
+        let navbar = document.querySelector('.navbar');
+
+        menu.onclick = () => {
+            navbar.classList.toggle('active');
+            menu.classList.toggle('fa-times');
+        }
+
+        window.onscroll = () => {
+            navbar.classList.remove('active');
+            menu.classList.remove('fa-times');
+        }
+    </script>
+</body>
+</html>
